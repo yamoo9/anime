@@ -1,10 +1,10 @@
 <h1 align="center">
-  <a href="https://animejs.com"><img src="/documentation/assets/img/animejs-v3-header-animation.gif" width="250"/></a>
+  <a href="https://animejs.com"><img src="./documentation/assets/img/animejs-v3-header-animation.gif" width="250"/></a>
   <br>
   anime.js
 </h1>
 
-<h4 align="center">JavaScript animation engine | <a href="https://animejs.com" target="_blank">animejs.com</a></h4>
+<h4 align="center">JavaScript 애니메이션 엔진 | <a href="https://animejs.com" target="_blank">animejs.com</a></h4>
 
 <p align="center">
   <a href="https://www.npmjs.com/package/animejs" rel="nofollow"><img src="https://camo.githubusercontent.com/011820ee25bf1d3ddaf635d869903b98eccaeae7/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f762f616e696d656a732e7376673f7374796c653d666c61742d737175617265" alt="npm version" data-canonical-src="https://img.shields.io/npm/v/animejs.svg?style=flat-square" style="max-width:100%;"></a>
@@ -12,29 +12,31 @@
 </p>
 
 <blockquote align="center">
-  <em>Anime.js</em> (<code>/ˈæn.ə.meɪ/</code>) is a lightweight JavaScript animation library with a simple, yet powerful API.<br>
-  It works with CSS properties, SVG, DOM attributes and JavaScript Objects.
+  <b>Anime.js</b>는 간단하지만 강력한 API를 제공하는 가볍고 빠른 JavaScript 애니메이션 라이브러리입니다.<br>
+  CSS 속성, SVG, DOM 속성 그리고 JavaScript 객체를 조작해 애니메이션을 구현합니다.
 </blockquote>
 
 <p align="center">
-  <a href="#getting-started">Getting started</a>&nbsp;|&nbsp;<a href="#documentation">Documentation</a>&nbsp;|&nbsp;<a href="#demos-and-examples">Demos and examples</a>&nbsp;|&nbsp;<a href="#browser-support">Browser support</a>
+  <a href="#시작하기">시작하기</a>&nbsp;|&nbsp;<a href="#사용-설명서">사용 설명서</a>&nbsp;|&nbsp;<a href="#데모-및-예제">데모 및 예제</a>&nbsp;|&nbsp;<a href="#브라우저-호환성">브라우저 호환성</a>
 </p>
 
-## Getting started
+## 시작하기
 
-### Download
+### 다운로드
 
-Via npm
+[NPM](https://npmjs.com)을 사용해 다운로드 받을 경우, 아래 명령어를 터미널에 입력합니다.
 
 ```bash
 $ npm install animejs --save
 ```
 
-or manual [download](https://github.com/juliangarnier/anime/archive/master.zip).
+또는 직접 [다운로드](https://github.com/juliangarnier/anime/archive/master.zip)하여 사용할 수 있도 있습니다.
 
-### Usage
+### 사용법
 
-#### ES6 modules
+#### ES6 모듈
+
+접미사 `es`가 포함된 파일을 호출하여 사용합니다.
 
 ```javascript
 import anime from 'animejs/lib/anime.es.js';
@@ -42,68 +44,79 @@ import anime from 'animejs/lib/anime.es.js';
 
 #### CommonJS
 
+Node.js의 `require()` 함수를 사용할 경우, 아래와 같이 입력합니다.
+
 ```javascript
 const anime = require('animejs');
 ```
 
-#### File include
+#### 파일 포함
 
-Link `anime.min.js` in your HTML :
+HTML에 `anime.min.js`를 불러오는 코드를 추가합니다.
 
 ```html
 <script src="anime.min.js"></script>
 ```
 
-### Hello world
+### 안녕! Anime.js
+
+Anime.js 사용법은 매우 간단합니다. `anime()` 함수 인자로 옵션(객체)을 설정하여 애니메이션을 대상에 적용할 수 있습니다.
 
 ```javascript
 anime({
-  targets: 'div',
-  translateX: 250,
-  rotate: '1turn',
-  backgroundColor: '#FFF',
-  duration: 800
+  // 애니메이션을 적용할 대상 (CSS 선택자)
+  targets: '.anime',
+  // X축으로 100px 만큼 이동
+  translateX: 100,
+  // 1.5바퀴 회전
+  rotate: '1.5turn',
+  // 배경 색상 변경
+  backgroundColor: '#fefefe',
+  // 0.4초 동안 애니메이션 처리
+  duration: 400
 });
 ```
 
-## [Documentation](https://animejs.com/documentation/)
+## [사용 설명서](https://animejs.com./documentation/)
 
-* [Targets](https://animejs.com/documentation/#cssSelector)
-* [Properties](https://animejs.com/documentation/#cssProperties)
-* [Property parameters](https://animejs.com/documentation/#duration)
-* [Animation parameters](https://animejs.com/documentation/#direction)
-* [Values](https://animejs.com/documentation/#unitlessValue)
-* [Keyframes](https://animejs.com/documentation/#animationKeyframes)
-* [Staggering](https://animejs.com/documentation/#staggeringBasics)
-* [Timeline](https://animejs.com/documentation/#timelineBasics)
-* [Controls](https://animejs.com/documentation/#playPause)
-* [Callbacks and promises](https://animejs.com/documentation/#update)
-* [SVG Animations](https://animejs.com/documentation/#motionPath)
-* [Easing functions](https://animejs.com/documentation/#linearEasing)
-* [Helpers](https://animejs.com/documentation/#remove)
+Anime.js의 강력한 기능을 100% 활용하려면 다음의 각 개념을 이해하고 사용법에 대해 학습해야 합니다.
 
-## [Demos and examples](http://codepen.io/collection/b392d3a52d6abf5b8d9fda4e4cab61ab/)
+* [대상(Targets)](https://animejs.com./documentation/#cssSelector)
+* [CSS 속성(Properties)](https://animejs.com./documentation/#cssProperties)
+* [속성 매개변수(Property parameters)](https://animejs.com./documentation/#duration)
+* [애니메이션 매개변수(Animation parameters)](https://animejs.com./documentation/#direction)
+* [값(Values)](https://animejs.com./documentation/#unitlessValue)
+* [키프레임(Keyframes)](https://animejs.com./documentation/#animationKeyframes)
+* [스태거(Staggering)](https://animejs.com./documentation/#staggeringBasics)
+* [타임라인(Timeline)](https://animejs.com./documentation/#timelineBasics)
+* [컨트롤(Controls)](https://animejs.com./documentation/#playPause)
+* [콜백과 프로미스(Callbacks and promises)](https://animejs.com./documentation/#update)
+* [SVG 애니메이션(Animations)](https://animejs.com./documentation/#motionPath)
+* [이징 함수(Easing functions)](https://animejs.com./documentation/#linearEasing)
+* [헬퍼(Helpers)](https://animejs.com./documentation/#remove)
 
-* [CodePen demos and examples](http://codepen.io/collection/b392d3a52d6abf5b8d9fda4e4cab61ab/)
+## [데모 및 예제](http://codepen.io/collection/b392d3a52d6abf5b8d9fda4e4cab61ab/)
+
+* [CodePen 데모 및 예제](http://codepen.io/collection/b392d3a52d6abf5b8d9fda4e4cab61ab/)
 * [juliangarnier.com](http://juliangarnier.com)
 * [animejs.com](https://animejs.com)
-* [Moving letters](http://tobiasahlin.com/moving-letters/) by [@tobiasahlin](https://twitter.com/tobiasahlin)
-* [Gradient topography animation](https://tympanus.net/Development/GradientTopographyAnimation/) by [@crnacura](https://twitter.com/crnacura)
-* [Organic shape animations](https://tympanus.net/Development/OrganicShapeAnimations/) by [@crnacura](https://twitter.com/crnacura)
-* [Pieces slider](https://tympanus.net/Tutorials/PiecesSlider/) by [@lmgonzalves](https://twitter.com/lmgonzalves)
-* [Staggering animations](https://codepen.io/juliangarnier/pen/4fe31bbe8579a256e828cd4d48c86182?editors=0100)
-* [Easings animations](https://codepen.io/juliangarnier/pen/444ed909fd5de38e3a77cc6e95fc1884)
-* [Sphere animation](https://codepen.io/juliangarnier/pen/b3bb8ca599ad0f9d00dd044e56cbdea5?editors=0010)
-* [Layered animations](https://codepen.io/juliangarnier/pen/6ca836535cbea42157d1b8d56d00be84?editors=0010)
-* [anime.js logo animation](https://codepen.io/juliangarnier/pen/d43e8ec355c30871cbe775193255d6f6?editors=0010)
+* [텍스트 애니메이션](http://tobiasahlin.com/moving-letters/) by [@tobiasahlin](https://twitter.com/tobiasahlin)
+* [그레디언트 지형 애니메이션](https://tympanus.net/Development/GradientTopographyAnimation/) by [@crnacura](https://twitter.com/crnacura)
+* [유기적 도형 애니메이션](https://tympanus.net/Development/OrganicShapeAnimations/) by [@crnacura](https://twitter.com/crnacura)
+* [피스 슬라이더](https://tympanus.net/Tutorials/PiecesSlider/) by [@lmgonzalves](https://twitter.com/lmgonzalves)
+* [스태거 애니메이션](https://codepen.io/juliangarnier/pen/4fe31bbe8579a256e828cd4d48c86182?editors=0100)
+* [이징 애니메이션](https://codepen.io/juliangarnier/pen/444ed909fd5de38e3a77cc6e95fc1884)
+* [구체 애니메이션](https://codepen.io/juliangarnier/pen/b3bb8ca599ad0f9d00dd044e56cbdea5?editors=0010)
+* [레이어 애니메이션](https://codepen.io/juliangarnier/pen/6ca836535cbea42157d1b8d56d00be84?editors=0010)
+* [anime.js 로고 애니메이션](https://codepen.io/juliangarnier/pen/d43e8ec355c30871cbe775193255d6f6?editors=0010)
 
 
-## Browser support
+## 브라우저 호환성
 
 | Chrome | Safari | IE / Edge | Firefox | Opera |
 | --- | --- | --- | --- | --- |
 | 24+ | 8+ | 11+ | 32+ | 15+ |
 
-## <a href="https://animejs.com"><img src="/documentation/assets/img/animejs-v3-logo-animation.gif" width="150" alt="anime-js-v3-logo"/></a>
+## <a href="https://animejs.com"><img src="./documentation/assets/img/animejs-v3-logo-animation.gif" width="150" alt="anime.js v3 로고"/></a>
 
-[Website](https://animejs.com/) | [Documentation](https://animejs.com/documentation/) | [Demos and examples](http://codepen.io/collection/b392d3a52d6abf5b8d9fda4e4cab61ab/) | [MIT License](LICENSE.md) | © 2019 [Julian Garnier](http://juliangarnier.com).
+[웹사이트](https://animejs.com/) | [사용 설명서](https://animejs.com./documentation/) | [데모 및 예제](http://codepen.io/collection/b392d3a52d6abf5b8d9fda4e4cab61ab/) | [MIT License](LICENSE.md) | © 2019 [Julian Garnier](http://juliangarnier.com).
