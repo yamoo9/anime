@@ -4,6 +4,20 @@ header {
   background-color: #252423;
 }
 
+* {
+  /* user-select: none; */
+  font-family: "Spoqa Han Sans" !important;
+  font-weight: 400 !important;
+}
+
+p {
+  line-height: 1.8;
+}
+
+button {
+  cursor: pointer;
+}
+
 body {
   position: absolute;
   width: 100%;
@@ -76,7 +90,7 @@ header {
   height: 60px;
   padding-left: 20px;
   padding-right: 20px;
-  border-bottom: 1px solid rgba(0,0,0,.65);
+  border-bottom: 1px solid rgba(0, 0, 0, .65);
 }
 
 h2 {
@@ -100,7 +114,7 @@ h2 {
   flex-direction: column;
   width: 240px;
   padding-top: 60px;
-  border-right: 1px solid rgba(0,0,0,.65);
+  border-right: 1px solid rgba(0, 0, 0, .65);
 }
 
 .sidebar-info {
@@ -119,7 +133,7 @@ h2 {
 .navigation ul {
   height: 30px;
   overflow-y: hidden;
-  -webkit-transition:opacity .4s ease;
+  -webkit-transition: opacity .4s ease;
   transition: opacity .4s ease;
 }
 
@@ -230,7 +244,7 @@ h2 {
 
 .demo-info p,
 .demo-info td {
-  color: #F6F4F2;
+  color: #f6f4f2;
 }
 
 .demo-info i {
@@ -250,7 +264,7 @@ h2 {
 
 .demo-info a[href^="http"],
 .demo-info a[href^="http"]:visited {
-  color: #F6F4F2;
+  color: #f6f4f2;
 }
 
 .demo-info p.bubble {
@@ -260,11 +274,11 @@ h2 {
 }
 
 .demo-info p.bubble.warning {
-  color: #FBF38C;
+  color: #fbf38c;
 }
 
 .demo-info p.bubble.info {
-  color: #61C3FF;
+  color: #61c3ff;
 }
 
 .demo-info p.bubble:after {
@@ -295,8 +309,8 @@ h2 {
   display: inline-block;
   width: 100%;
   padding: 8px 12px;
-  background-color: rgba(0,0,0,.2);
-  border: 1px solid rgba(0,0,0,.2);
+  background-color: rgba(0, 0, 0, .2);
+  border: 1px solid rgba(0, 0, 0, .2);
   border-radius: 3px;
 }
 
@@ -304,14 +318,14 @@ h2 {
   position: relative;
   padding: 0 2px;
   height: 20px;
-  background-color: rgba(0,0,0,.2);
-  box-shadow: inset 0 0 1px rgba(0,0,0,.4);
+  background-color: rgba(0, 0, 0, .2);
+  box-shadow: inset 0 0 1px rgba(0, 0, 0, .4);
   border-radius: 3px;
 }
 
 .demo-info table {
   margin-bottom: 20px;
-  border: 1px solid rgba(255,255,255,.15);
+  border: 1px solid rgba(255, 255, 255, .15);
   border-spacing: 0;
   border-radius: 3px;
 }
@@ -319,8 +333,8 @@ h2 {
 .demo-info td {
   vertical-align: middle;
   padding: 8px 12px;
-  border-left: 1px solid rgba(255,255,255,.15);
-  border-top: 1px solid rgba(255,255,255,.15);
+  border-left: 1px solid rgba(255, 255, 255, .15);
+  border-top: 1px solid rgba(255, 255, 255, .15);
 }
 
 .demo-info thead td {
@@ -328,7 +342,7 @@ h2 {
   font-size: 16px;
   line-height: 22px;
   letter-spacing: 1px;
-  color: rgba(255,255,255,.4);
+  color: rgba(255, 255, 255, .4);
   border-top: none;
 }
 
@@ -371,7 +385,7 @@ article {
   width: 100%;
   min-height: 200px;
   padding-top: 35px;
-  border-bottom: 1px solid rgba(0,0,0,.65);
+  border-bottom: 1px solid rgba(0, 0, 0, .65);
   cursor: pointer;
 }
 
@@ -423,7 +437,7 @@ article {
   font-size: 14px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #F6F4F2;
+  color: #f6f4f2;
   opacity: .9;
 }
 
@@ -646,6 +660,10 @@ input.progress[value]::-webkit-slider-thumb {
   transition: opacity .5s ease;
 }
 
+.range-value-staggering-demo .label {
+  margin-top: -4px;
+}
+
 .demo.active .label {
   opacity: .2;
 }
@@ -677,11 +695,11 @@ input.progress[value]::-webkit-slider-thumb {
 }
 
 .add-states-demo .el {
-  border: 1px solid rgba(0,0,0,0);
+  border: 1px solid rgba(0, 0, 0, 0);
 }
 
 #cssProperties .el {
-  transform: translate3d(0,0,0);
+  transform: translate3d(0, 0, 0);
 }
 
 /* Responsive */
@@ -718,15 +736,15 @@ input.progress[value]::-webkit-slider-thumb {
   }
 
   .demos::-webkit-scrollbar-track {
-    background-color: rgba(0,0,0,.65);
+    background-color: rgba(0, 0, 0, .65);
   }
 
   .demos::-webkit-scrollbar-thumb {
-    background-color: rgba(255,255,255,.3);
+    background-color: rgba(255, 255, 255, .3);
   }
 
   .demos::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(255,255,255,.6);
+    background-color: rgba(255, 255, 255, .6);
   }
 }
 
@@ -740,4 +758,8 @@ input.progress[value]::-webkit-slider-thumb {
   .demo-info {
     width: 50%;
   }
+}
+
+.hljs-comment {
+  font-style: normal;
 }
