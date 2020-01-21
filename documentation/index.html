@@ -2166,7 +2166,7 @@ var domNode = function () {
         { value: 0.1, easing: 'easeOutSine', duration: 500 },
         { value: 1, easing: 'easeInOutQuad', duration: 1200 }
       ],
-      delay: anime.stagger( 200, { grid: [ 14, 5 ], from: 'first' } )
+      delay: anime.stagger( 200, { grid: [ 14, 5 ], from: 'center' } )
   });/*DEMO*/
 }
 </script>
@@ -3363,7 +3363,7 @@ timeline.seek(timeStamp);
                 주의! SVG 도형(Shapes)의 포인트(points) 개수가 동일해야 합니다.
               </p><br>
               <p class="bubble info">
-                <a href="https://hackernoon.com/metamorphosis-morphing-svgs-378cf4f3aa58">SVG 도형 몰핑</a> 애니메이션 참고
+                <a href="https://hackernoon.com/metamorphosis-morphing-svgs-378cf4f3aa58" target="_blank" rel="noreferrer noopener">SVG 도형 몰핑</a> 애니메이션 참고
               </p>
             </div>
             <div class="demo-content align-center morphing-demo">
@@ -3412,7 +3412,7 @@ timeline.seek(timeStamp);
               </p>
               <pre><code>strokeDashoffset: [ anime.setDashoffset, 0 ]</code></pre>
               <p class="bubble info">
-                <a href="https://css-tricks.com/svg-line-animation-works/">라인 드로잉(line drawing)</a> 애니메이션 참고
+                <a href="https://css-tricks.com/svg-line-animation-works/" target="_blank" rel="noreferrer noopener">라인 드로잉(line drawing)</a> 애니메이션 참고
               </p>
             </div>
             <div class="demo-content align-center line-drawing-demo">
@@ -3948,7 +3948,7 @@ timeline.seek(timeStamp);
               <p>요소의 원래 값(original value)을 반환합니다.</p>
               <pre><code>anime.get( target, propertyName, unit );</code></pre>
               <p>
-                anime.js는 <a href="https://developer.mozilla.org/ko/docs/Web/API/Window/getComputedStyle">getComputedStyle</a>을 사용하여 원본 CSS에 접근하므로 도출되는 값은<br> 
+                anime.js는 <a href="https://developer.mozilla.org/ko/docs/Web/API/Window/getComputedStyle" target="_blank" rel="noreferrer noopener">getComputedStyle</a>을 사용하여 원본 CSS에 접근하므로 도출되는 값은<br> 
                 대부분 <code>'px'</code> 단위 값으로 반환되며 3번째(옵션) 인자는 원하는 단위로 값을 변환합니다.
               </p>
               <pre><code>anime.get( domNode, 'width', 'rem' );</code></pre>
